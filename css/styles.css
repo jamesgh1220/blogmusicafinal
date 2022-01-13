@@ -1,0 +1,674 @@
+/* RESETEAR LOS ESTILOS */
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #fff;
+    background: url("../img/fondo1.jpg") no-repeat center center/cover;
+    min-height: 100vh;
+    transition: 0.5s;
+}
+
+
+.container {
+    width: 90%;
+    margin: auto;
+    background-color: #191919c4;
+}
+
+/* MENU*/ 
+
+.menu {
+    background-color: black;
+    height: 75px;
+    width:100%;
+    display: flex; /* para que esten alineados los componentes del menu */
+    justify-content: space-between; /* espacio entre los componentes del menu */
+    align-items: center;
+    border-bottom: 2px solid #fff;
+}
+.logo{
+    color: white;
+    font-size: 35px;
+    padding: 0 80px;
+    font-weight: bold;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.menu-items {
+    display: inline-flex; /*alineados*/
+    list-style: none;
+    margin-right: 30px;
+    /*display: none;*/
+}
+
+.menu-items li {
+    border-radius: 3px;
+    border-left: 2px solid rgba(255, 255, 255, 0.397);
+    margin: 0 5px;
+}
+
+.menu-items li a {
+    padding: 7px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    text-transform: uppercase;
+    color: white;
+}
+
+.btn-menu {
+    margin-right: 30px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-items li:hover {
+    opacity: .8;
+    transition: .4s;/*Para que el cambio no sea muy brusco*/
+    border-bottom: 2px solid #30fa84;
+}
+
+li.active {
+    background-color: rgba(143, 142, 142, 0.479);
+    transition: .4s;/*Para que el cambio no sea muy brusco*/
+    border-left: none;
+}
+
+ul.show {
+    top: 65px; /*Tamaño que se le pone al nav para cuando se muestre de manera responsive al lado izquierdo*/
+}
+
+div.show {
+    top: -500vh;
+    transition: 0.4s;
+}
+
+/* FIN MENU */ 
+
+.content, .principal{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    min-height: 60vh;
+    transition: 0.5s;
+}
+
+/* MENU LATERAL */
+
+.menu ul li {
+    position: relative;
+    list-style: none;
+    border-radius: 10px;
+    width: 70px;
+    height: 50px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+
+.menu ul li:hover {
+    background: #3498db62;
+}
+
+.menu ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 40px;
+    text-align: center;
+}
+
+.menu ul li a .icon .fa {
+    font-size: 24px;
+}
+
+.menu ul li:hover a .icon .fa {
+    border-bottom: 2px solid #30fa84;
+}
+
+.menu ul li a .title {
+    position: absolute;
+    left: 0px;
+    display: block;
+    background: #3498db62;
+    width: auto;
+    padding: 5px 10px;
+    transform: translateY(-11%) translateX(0px);
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu ul li:hover a .title {
+    transform: translateY(15%) translateX(0px);
+    visibility: visible;
+    opacity: 1;
+}
+
+/* CONTENIDO CENTRAL */
+
+.central{
+    float: right;
+    width: 100%;
+}
+
+
+.img-home{
+    position: relative;
+    height: 500px;
+    background: url("../img/fondo2pac.jpeg") no-repeat center center/cover;
+    top: 5%;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    border:0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background: #3498dbb4;
+    border-radius: 0px;
+    transition: 0.5s;
+}
+
+.img-home h2,
+.img-home p{
+    margin-bottom: 0px;
+}
+
+/* FIN CONTENIDO CENTRAL */
+
+/* FORMULARIO RESPONSIVE LOGIN Y REGISTRO */
+
+.home-ppal{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+    background: #2ad47160;;
+}
+
+.home-ppal.active {
+    background:#29b4df63
+}
+
+.home {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.15);
+}
+
+.home .box {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home .box h2 {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.form-home {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background: url("../img/pac.jpg") no-repeat top center/cover;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.form-home.active { /*Debe ser juntas las clases*/
+    left: 50%;
+    background: url("../img/biggie.jpeg") no-repeat center center/cover;
+}
+
+.form-home .form-ppal {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    transition: 0.5s;
+}
+
+.form-home .sign-in-form {
+    transition-delay: 0.25s;
+}
+
+.form-home.active .sign-in-form {
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.form-home .sign-up-form {
+    left: 100%;
+    transition-delay: 0s;
+}
+
+.form-home.active .sign-up-form {
+    left: 0;
+    transition-delay: 0.25s;
+}
+
+.form-home .form-ppal form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-home .form-ppal form h3 {
+    font-size: 1.5em;
+    background:rgba(49, 49, 49, 0.438);
+    border-radius: 3px;
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+.form-home .form-ppal form p {
+    color: #fff;
+}
+
+.form-home .form-ppal form input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #333;
+}
+
+.form-home .form-ppal form .password-recover {
+    color: #fff;
+
+}
+
+.home-ppal .home .box button {
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    background: #3498db62;
+    border: 2px solid #00548b;
+    border-radius: 24px;
+}
+
+.home-ppal .home .box button:hover {
+    background: #3498dbb4;
+    border: 2px solid #00548b;
+    border-radius: 0px;
+    transition: 0.4s;
+}
+
+.home-ppal.active .home .box button {
+    background :#7cffb33d;
+    border: 2px solid #2ecc71;
+    border-radius: 24px;
+}
+
+.home-ppal.active .home .box button:hover {
+    background :#7cffb33d;
+    border: 2px solid #2ecc71;
+    border-radius: 0px;
+}
+
+.form-home .form-ppal form input[type="text"],
+.form-home .form-ppal form input[type="email"],
+.form-home .form-ppal form input[type="password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border-bottom: 3px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    transition: .25s;
+}
+
+.form-home .form-ppal form input[type="text"]:focus,
+.form-home .form-ppal form input[type="email"]:focus,
+.form-home .form-ppal form input[type="password"]:focus{
+    width: 280px;
+    border-radius: 5px;
+    border-color: #2ecc71;
+}
+
+.form-home .form-ppal form input[type="submit"]{
+    border: 0;
+    background :#7cffb33d;
+    display: block;
+    width: 110px;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    border-radius: 24px;
+    outline: none;
+    color: #fff;
+    transition: .25s;
+    cursor: pointer;
+}
+
+.form-home .form-ppal form input[type="submit"]:hover{
+    transition: .3s;
+    border-radius: 0px;
+}
+
+/* FIN FORMULARIO RESPONSIVE LOGIN Y REGISTRO */
+
+/* CONTENIDO VISTAS NEWS */
+
+.view-new {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.view-new .title-section{
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
+
+.news-content {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.news-content .news {
+    position: relative;
+    width: 295px;
+    height: 375px;
+    background: #33333363;
+    border: 1px solid rgba(255, 255, 255, 0.308);
+    margin: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.news-content .news:hover {
+    height: 400px;
+    width: 300px;
+    border: 1.5px solid #30fa84;
+}
+
+.news-content .news .img-new {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #3498db62;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+}
+
+.news-content .news:hover .img-new {
+    background: #30fa845e;
+    clip-path: circle(180px at right 0);
+    transition: 0.5s;
+}
+
+.news-content .news .img-new h2 {
+    color: rgba(255, 255, 255, 0.774);
+    font-size: 9em;
+    padding: 30px 0;
+}
+
+.news-content .news:hover .img-new h2 {
+    font-size: 7em;
+    padding: 5px 185px;
+    right: 0;
+    top: 0;
+    transition: 0.5s;
+}
+
+.news-content .news .info-new {
+    position: absolute;
+    width: 100%;
+    bottom: 55px;
+    padding: 20px;
+    text-align: center;
+}
+
+.news-content .news:hover .info-new {
+    bottom: 120px;
+    transition: 0.5s;
+}
+
+.news-content .news a {
+    bottom: 70px;
+    position: relative;
+    left: 34%;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #262626;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.news-content .news a:hover {
+    background: #3498db62;
+    border-radius: 0px;
+    transition: 0.5s;
+}
+
+/* FINCONTENIDO VISTAS NEWS */
+
+.form{
+    width: 400px;
+    margin: auto;
+    padding: 40px;
+    background-color: #191919c4;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.form h1{
+    color: white;
+    font-weight: 500;
+}
+
+#footer{
+    clear: both;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #222;
+    border-top: 5px solid #01b1ea;
+}
+
+@media (max-width: 991px){
+    .home-ppal {
+        max-width: 400px;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-ppal .home {
+        top: 0;
+        height: 100%;
+    }
+
+    .form-home {
+        width: 100%;
+        height: 450px;
+        top: 0;
+        box-shadow: none;
+    }
+
+    .home .box {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: 150px;
+    }
+
+    .box.sign-in {
+        top: 0;
+    }
+
+    .form-home.active {
+        left: 0;
+        top: 150px;
+    }
+
+    .menu {
+        height: 65px; /* Porque el metodo ul.show tiene esa propiedad */
+    }
+
+    .btn-menu {
+        display: inline-flex; /*Para que se muestre en la posicion que corresponde*/ 
+    }
+
+    .menu-items {
+        position: fixed;
+        display:flex;
+        overflow: scroll;
+        height: 100%;
+        width: 90%;
+        background-color:rgb(49, 49, 49);
+        top: -150vh; /* Se sale hacia arriba por fuera de la pantalla */
+        text-align: center;
+        transition: all .3s;
+        flex-direction: column; /*Para mostrar los elemntos hacia abajo en el menu responsive*/
+    }
+    
+    .menu-items li {
+        margin: 30px 0 0 0;
+        line-height: 30px;
+        border: none;
+    }
+
+    .menu-items li:hover {
+        background-color: rgba(143, 142, 142, 0.479);
+    }
+
+    .menu-items li a {
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .logo{
+        font-size: 20px;
+        padding-left: 35px;
+    }
+
+    .form{
+        width: 340px;
+        padding: 75px;
+        top: 55%;
+    }
+
+    .logo {
+        font-size: 25px;
+        padding-left: 35px;
+    }
+
+
+    .menu-items li:hover {
+        background-color: rgba(143, 142, 142, 0.479);
+    }
+
+    .menu-items li a {
+        font-size: 15px;
+    }
+
+    .form{
+        width: 340px;
+        padding: 75px;
+        top: 55%;
+    }
+
+    .img-home {
+        float: right;
+        width: 95%;
+    }
+}
+/*
+@media screen and (max-width: 952px) {}
+@media screen and (max-width: 858px) {}
+/*Para girar el dispositivo movil y poder ver bien el menu
+@media screen and (max-width: 858px) and (orientation: landscape) {
+    .menu-items li {
+        margin: 5px 0 0 0;
+    }
+
+    .menu-items {
+        overflow: scroll;/*Para que el usuario pueda arrastrar el menu y vea todas las opciones (tactil)
+        height: 80%;
+    }
+
+    .form{
+        width: 340px;
+        padding: 75px;
+        top: 55%;
+    }
+}*/

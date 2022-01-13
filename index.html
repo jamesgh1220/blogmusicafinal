@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<?=base_url?>css/normalize.css">
+    <link rel="stylesheet" href="<?=base_url?>css/styles.css">
+    <title>Blog de Música</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="menu">
+            <label class="logo">RAP HIP-HOP</label>
+            
+            <ul class="menu-items">
+              <li class = "active">
+                <a href="#">Inicio</a>
+              </li>
+              <li>
+                <a href="#">Rap Americano</a>
+              </li>
+              <li>
+                <a href="#">Rap Español</a>
+              </li>
+              <li>
+                <a href="#">Rap Colombiano</a>
+              </li>
+              <li>
+                <a href="#">Freestyle</a>
+              </li>
+            </ul>
+            <span class="btn-menu">
+                <i class="fa fa-bars"></i>
+            </span>
+        </nav>
+        <div class="content">
+            <section class="login">
+                <form action="" class="form-login">
+                    <label for="name">Nombre de Usuario:</label>
+                    <input type="text" name="name">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" name="password">
+                    <button type="submit">Ingresar</button>
+                </form>
+            </section>
+        </div> 
+        <footer id="footer">
+          <p>Desarrollado por John James Gallego Hernández &copy; <?=date('Y')?></p>
+        </footer>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/de75e0fec7.js" crossorigin="anonymous"></script>
+<script src="./main.js"></script>
+</html>

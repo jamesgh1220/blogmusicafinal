@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Música</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/de75e0fec7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="http://localhost/blogmusica/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/blogmusica/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="menu">
+            <a href="http://localhost/blogmusica/" class="logo">BLOG DE MUSICA</a>
+            <ul class="menu-items">
+                <li class="active">
+                    <a href="http://localhost/blogmusica/">Inicio</a>
+                </li>
+                <li>
+                    <a href="http://localhost/blogmusica/">Noticias</a>
+                </li>
+                <li>
+                    <a href="http://localhost/blogmusica/category/index">Categorias</a>
+                </li>
+                <li>
+                    <a href="#">Contacto</a>
+                </li>
+                <li>
+                    <a href="http://localhost/blogmusica/user/register">Registrarse</a>
+                </li>
+            </ul>
+            <span class="btn-menu">
+                <i class="fa fa-bars"></i>
+            </span>
+        </nav>
+        <div class="content">
+            <div class="principal">
+                <section class="register">
+                    <form action="http://localhost/blogmusica/user/save" class="form" id="register" method="post">
+                        <h1>Registrarse</h1>
+                        <input type="text" name="name" placeholder="Nombre" required>
+                        <input type="text" name="lastName" placeholder="Apellidos" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="password" name="password" placeholder="Contraseña" required>
+                        <input type="submit" value="Registrarse">
+                    </form>
+                </section>
+            </div>
+            <!--Cierra principal desde central.php o el content dependiendo el caso-->
+            <footer id="footer">
+                <p>Desarrollado por John James Gallego Hernández &copy; 2021</p>
+            </footer>
+    </div>
+    <!--Cierra el container desde el header-->
+    <script src="http://localhost/blogmusica/script.js" type="text/javascript"></script>
+
+</body>
+
+</html>
